@@ -122,13 +122,7 @@ FROM AI_DAY3_TEST;
 
 -- ✅ Correct Implementation
 SELECT 
-    UNSTRUCTURED_NOTE,
-    AI_FILTER(
-        PROMPT(
-            'Does the following text contain any personal insults? {0}', 
-            UNSTRUCTURED_NOTE
-        )
-    ) AS HAS_INSULTS 
+    UNSTRUCTURED_NOTE, AI_FILTER( PROMPT( 'Does the following text contain any personal insults? {0}', UNSTRUCTURED_NOTE)) AS HAS_INSULTS 
 FROM AI_DAY3_TEST;
 
 
